@@ -1,0 +1,120 @@
+/*
+    CSS site Mobile-First
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+    Cabeçalho do site
+*/
+header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: white;
+}
+
+.left-header{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.middle-header{
+    
+    height: 50px;
+    width: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo-furia{
+    background-image: url('../imagens/f_black_b7.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.right-header{
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    margin-right: 10px;
+}
+
+/*
+    Classe para os icons (menu, search, person, carrinho)
+*/
+.icon{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+
+/*
+    A imagem principal (de destaque) do site
+*/
+.banner{
+    height: 80vh;
+    width: 100%;
+    background-image: url('../imagens/imagem_furia_mobile.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
+
+/*
+    div criadas apenas para preenchimento do site
+*/
+.resto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+}
+
+/*
+    Footer com minhas informações
+*/
+
+footer{
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+footer > a{
+    color: yellow;
+}
+
+footer > a:hover{
+    color: red;
+}
+

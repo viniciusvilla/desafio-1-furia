@@ -1,0 +1,321 @@
+/*
+    chat-bot.css - Mobile First.
+*/
+
+:root{
+    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --msger-bg: #fff;
+    /*--left-msg-bg: linear-gradient(to right, #cccccc,#fff );*/
+    --left-msg-bg: #D0E7FF;
+    --right-msg-bg: #F1F1F1;
+}
+
+
+/*
+    Área relacionada a caixa do chat
+*/
+
+/*Balão (botão) que abre o chat-bot*/
+.chat-baloon{
+    position: fixed; 
+    right: 30px;
+    bottom: 20px;
+
+    background-color: black;
+
+    height: 70px;
+    width: 70px;
+
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 1000; 
+
+    cursor: pointer;
+}
+
+/*As configurações abaixo são em relação ao posicionamento do chat-bot em relação a tela (Ele está no canto inferior direito)*/
+
+.chat_area {
+    position: fixed; /*Se mantém fixo mesmo mechendo no scroll */
+    right: 10px; /*Posicionamento a direita*/
+    bottom: 50px;
+    z-index: 1000;
+}
+
+/*botão de fechar o chat-bot*/
+.close_button {
+    display: none;
+    position: absolute;
+    top: -40px; /*Posisciona o botão close acima do chat-bot*/
+    right: 10px;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url('../imagens/icons/close_white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    z-index: 1001;
+
+    cursor: pointer;
+}
+
+#chat {
+    position: relative; 
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 320px; /*Largura mobile*/
+    
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/*
+    Área relacionada ao perfil do bot: Furia furia-logo/simbolo
+*/
+
+.header-bot {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 70px;
+    border-radius: 10px 10px 0px 0px;
+
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.075);
+}
+
+#info_bot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 150px;
+    height: 100%;
+    border-radius: 10px 0px 0px 0px;
+    margin-left: 10px;
+}
+
+.perfil_chat {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#name_furia {
+    height: 30px;
+    width: 70px;
+    background-image: url('../imagens/f_black_b7.png');
+}
+
+#logo_furia {
+    height: 30px;
+    width: 35px;
+    background-image: url('../imagens/Furia_Esports_logo.png');
+}
+
+#verify_symbol {
+    width: 20px;
+    height: 20px;
+    background-image: url('../imagens/verify_symbol.png');
+
+}
+
+/*
+    Área relacionada a caixa de fluxo de mensagens.
+*/
+
+.msger-chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+
+    border-radius: 0px 0px 10px 10px;
+
+    background-image: url('../imagens/img_chat_10.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.msger-chat::-webkit-scrollbar{
+    width: 3px;
+}
+
+.msger-chat::-webkit-scrollbar-track{
+    background: white;
+}
+
+.msger-chat::-webkit-scrollbar-thumb{
+    background:  #e0e0e0;
+    border-radius: 10px;
+}
+
+.msg{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.msg:last-of-type{
+    margin: 0;
+}
+
+.msg-img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/*.msg-bubble se refere as "bolhas" das mensagens*/
+
+.msg-bubble{
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--left-msg-bg);
+}
+
+.msg-info{
+    display: flex;
+    justify-content: space-between; /*As mensagens novas estão ignorando essas confs aqui*/
+    align-items: center; 
+}
+
+.msg-info-time{
+    font-size: 0.85em; /*Mas se altero aqui elas mudam normalmente*/
+}
+
+.left-msg .msg-bubble{
+    color: black;
+    border-bottom-left-radius: 0;
+
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.100);
+}
+
+.right-msg{
+    flex-direction: row-reverse;
+}
+
+.right-msg .msg-bubble{
+    background: var(--right-msg-bg);
+    color: #000;
+    border-bottom-right-radius: 0;
+    
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.150);
+}
+
+.right-msg .msg-img{
+    margin: 0 0 0 10px;
+}
+
+.msg-text{
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+/*
+    Área relacionada ao botão de anexo / input de texto / botão enviar
+*/
+
+.msger-inputarea {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.075);
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 5px 0;
+}
+
+.buttons_appearance {
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: background-color 0.2s ease;
+
+    cursor: pointer;
+}
+
+
+.msger-input {
+    resize: none;
+    flex: 1;
+    height: auto;
+    max-height: calc(1.5em * 4);
+    /* Até 4 linhas */
+    line-height: 1.5em;
+
+    overflow-y: auto;
+
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 20px;
+
+    margin: 0 10px;
+    box-sizing: border-box;
+
+    border: 0px;
+    outline: none;
+
+
+}
+
+.msger-input::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari e Edge novo */
+}
+
+#attach_img {
+    height: 45px;
+    width: 45px;
+
+    background-image: url('../imagens/icons/attach_file.png');
+
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#attach_img:hover {
+    background-color: #E6E6E6;
+}
+
+#attach_img:active {
+    background-color: #cccccc;
+}
+
+#ifoto {
+    display: none;
+}
+
+#submit_button {
+    height: 45px;
+    width: 45px;
+
+    background-image: url('../imagens/icons/send_icon.png');
+    
+
+    margin-right: 10px;
+
+    background-color: white;
+    border: 0px;
+    border-radius: 50%;
+}
+
+#submit_button:hover {
+    background-color: #E6E6E6;
+}
+
+#submit_button:active {
+    background-color: #cccccc;
+}
+

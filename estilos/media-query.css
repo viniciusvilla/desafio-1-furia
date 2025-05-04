@@ -1,0 +1,56 @@
+/*
+    Media-query - site.css / chat-bot.css
+*/
+@media screen and (min-width: 784px){
+    header{
+        height: 100px;
+    }
+
+    .left-header{
+    
+       
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .right-header{
+        width: 100px;
+        margin-left:20px;
+    }
+
+    .banner{
+        background-image: url('../imagens/imagem_furia_2.webp');
+        height: 100vh;
+        
+    }
+
+    .chat-baloon{
+    
+        height: 70px;
+        width: 70px;
+    
+    }
+    
+    .chat_area {
+        right: 20px;
+       
+      
+    }
+    
+    
+    .close_button {
+        top: -40px; /* apenas troquei os valores de top e right para uma melhor aparência */
+        right: 10px;
+        background-color: red;
+        width: 30px;
+        height: 30px;
+      
+    }
+    
+    #chat {
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        
+    }
+}

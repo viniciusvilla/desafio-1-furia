@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/site.css">
+    <link rel="stylesheet" href="estilos/chat-bot.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="left-header">
+            <div class="menu-icon icon" style="background-image: url('imagens/icons/menu.png');"></div>
+            <div class="search-icon icon" style=" background-image: url('imagens/icons/search.png');"></div>
+        </div>
+
+        <div class="middle-header">
+            <div class="logo-furia" ></div>
+        </div>
+
+        <div class="right-header">
+            <div class="perfil-icon icon" style="background-image: url('imagens/icons/person.png');"></div>
+            <div class="cart-icon icon" style="background-image: url('imagens/icons/shopping_bag.png');"></div>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+
+        </div>
+        
+        <div class="resto">
+            <div>Resto do site...</div>
+        </div>
+
+        <div class="resto">
+            <div>Resto do site...</div>
+        </div>
+
+        <div class="resto">
+            <div>Resto do site...</div>
+        </div>
+
+        <div class="resto">
+            <div>Resto do site...</div>
+        </div>
+
+        <div class="resto">
+            <div>Resto do site...</div>
+        </div>
+
+        <div class="chat-baloon" style="background-image: url('imagens/icons/chat_white.png');">
+            
+        </div>
+
+        <div class="chat_area">
+            <div class="close_button"></div>
+            <section id="chat">
+                <div class="header-bot">
+                    <div id="info_bot">
+                        <div id="name_furia" class="perfil_chat"></div>
+                        <div id="logo_furia" class="perfil_chat"></div>
+                        <div id="verify_symbol" class="perfil_chat"></div>
+                    </div>
+                </div>
+                <div class="msger-chat">
+                    <div class="msg left-msg">
+                        <!--
+                        Em .msg-img que será colocado via JS as imagens das bolhas do chat
+                        -->
+                        <div class="msg-img"></div>
+                        <!--
+
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">BOT</div>
+                                <div class="msg-info-time">10:45</div>
+                            </div>
+                            <div class="msg-text">
+                                Fala, FURIOSO! Manda sua pergunta 👊
+                            </div>
+                        </div>
+                        
+                        -->
+                    </div>
+                    <div class="msg right-msg">
+                        <div class="msg-img"></div>
+                        <!--
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">USER</div>
+                                <div class="msg-info-time">10:46</div>
+                            </div>
+                            <div class="msg-text">
+                                X1 com o Fallen, agora 😠.
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <form class="msger-inputarea">
+                    <label for="ifoto">
+                        <div id="attach_img" class="buttons_appearance"></div>
+                    </label>
+                    <input type="file" name="foto" id="ifoto">
+                    <textarea name="mensagem" class="msger-input" placeholder="Mensagem..." rows="1"></textarea>
+                    <button id="submit_button" class="buttons_appearance msger-send-btn" type="submit"></button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="chat-bot.js"></script>
+
+    <footer><a href="https://github.com/viniciusvilla" target="_blank">Vinicius Villa Real</a> - Desafio #1 Furia</footer>
+</body>
+</html>
